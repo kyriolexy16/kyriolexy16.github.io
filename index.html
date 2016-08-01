@@ -1,1 +1,32 @@
-My Page
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online GPS Tracker</title>
+<link rel = "shortcut icon" href = "favicon.ico"></link>
+</head>
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(10.3157,123.8854),
+    zoom:11,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+<body bgcolor = "black">
+<img src = "cover1.jpg" alt = "Online GPS Tracker">
+<br>
+<br>
+<br>
+<div id="googleMap" style="width:500px;height:380px;"></div>
+</body>
+</html>
+
